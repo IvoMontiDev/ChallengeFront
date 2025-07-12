@@ -1,0 +1,66 @@
+.dashboard-header {
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px -2px rgba(0, 0, 0, 0.1);
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-div{
+  display: flex;
+  align-items: center;
+  gap: 1rem
+}
+
+.box {
+  background: linear-gradient(135deg, #4f46e5, #ec4899);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #4f46e5, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 0.2rem 0;
+}
+
+.dashboard-welcome {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+.welcome-user{
+color: #2563EB;
+}
+
+.logout-btn {
+  border: 1.5px solid #ef4444;
+  background: #F9F9FB;
+  color: #EF4444;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.7rem 1.5rem;
+  margin-left: 0.5vw;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.logout-btn:hover {
+  background: #fee2e2;
+  border-color: #ef4444;
+}

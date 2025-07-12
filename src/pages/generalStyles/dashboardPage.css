@@ -1,0 +1,56 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #EBF4FF, #FDF2F8, #EBF4FF);
+  padding: 2rem 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* All direct children shrink to 90vw, centered and maintaining the gap */
+.dashboard-container > *:not(.modal-overlay) {
+  width: 95vw;
+  margin: 0 auto 2rem;
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 900px) {
+  .tableSection {
+    padding: 1.2rem 0.7rem;
+  }
+  
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem 0.7rem;
+  }
+  
+  .search {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 0.2rem 1rem 0.2rem;
+  }
+  
+  .tableSection {
+    padding: 0.7rem 0.2rem;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+  }
+  
+  .tableTitle {
+    font-size: 1rem;
+  }
+  
+  .table th, .table td {
+    padding: 0.5rem 0.2rem;
+    font-size: 0.95rem;
+  }
+}

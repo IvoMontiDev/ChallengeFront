@@ -1,0 +1,138 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(14, 19, 26, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #F5F5F5;
+  border-radius: 18px;
+  padding: 0 2.5rem 2rem 2.5rem;
+  box-shadow: 0 4px 32px 0 rgba(80, 80, 160, 0.25);
+  max-height: 600px;
+  min-width: 30vw;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+h2{
+margin: 0;
+}
+
+.modal-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 0rem;
+  margin-bottom: 0.2rem;
+}
+
+.modal-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 1rem 0;  
+  padding-top: 0.5rem;
+  color: #64748B;
+}
+
+.input-label {
+  display: block;
+  font-size: medium;
+  color: #020817;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus,
+.modal-content select:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1.5px solid #BFDBFE;
+  font-size: 1rem;
+  background: #F9F9FB;
+  color: #64748B;
+  resize: none;
+  align-self: start;
+  box-sizing: border-box;
+}
+
+
+.modal-content button[type="submit"] {
+  background: linear-gradient(90deg, #4f46e5, #ec4899);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.modal-content button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ul-list {
+  color: black;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: end;
+  gap: 0.5rem;
+}
+
+.button-add-user {
+  background-color: #F9F9FB;
+  height: 5vh;
+  width: 5vh;
+  border-radius: 10px;
+  color: #64748B;
+  border: #E2E8F0;
+  font-size: large;
+}
+
+.del-user-btn{
+  font-size: 12px;
+  border-radius: 10px;
+  border: none;
+  margin-left: 0.2vw;
+}
+
+.button-cancel {
+  background: #f3f3f3;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
