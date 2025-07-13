@@ -1,23 +1,22 @@
 import { RiCloseFill } from "react-icons/ri";
 import { FiDollarSign, FiUsers, FiCalendar } from "react-icons/fi";
-import type { Product } from "../../pages/dashboardPage";
 import formatDate from '../../utils/date';
+import type Product from '../../types/product';
 import "./productStyles/viewProductInfoModal.css";
+
 
 interface Props {
   show: boolean;
-  product: Product | null;
+  product: Product;
   onClose: () => void;
-  users: { u_id: number; u_name: string }[];
+  users: string[]; 
 }
 
-function ViewProductInfoModal({ show, product, onClose }: Props) {
+function ViewProductInfoModal({ show, product, onClose, users }: Props) {
   if (!show || !product) return null;
 
-const cached = localStorage.getItem('selectedProduct');
-const fallbackProduct = cached ? JSON.parse(cached) : null;
-
-const createdAtFormatted = product.created_at_formatted || fallbackProduct?.created_at_formatted || "Not available";
+const rawDate = product.created_at_formatted;
+const displayDate = formatDate(rawDate);
 
   return (
     <div className="modal-overlay">
@@ -37,11 +36,11 @@ const createdAtFormatted = product.created_at_formatted || fallbackProduct?.crea
           <div className="modal-box">{product.description}</div>
 
           <div className="modal-label">
-            <FiUsers /> Usuarios Asignados ({product.userNames?.length || 0})
+            <FiUsers /> Usuarios Asignados ({users?.length || 0})
           </div>
-          {product.userNames?.length ? (
+          {users?.length ? (
             <div className="modal-tags">
-              {product.userNames.map((name, i) => (
+              {users.map((name, i) => (
                 <span key={i} className="modal-tag">{name}</span>
               ))}
             </div>
@@ -50,7 +49,7 @@ const createdAtFormatted = product.created_at_formatted || fallbackProduct?.crea
           )}
 
           <div className="modal-label"><FiCalendar /> Fecha de Creación</div>
-          <div className="modal-box">{formatDate(createdAtFormatted)}</div>
+          <div className="modal-box">{formatDate(displayDate)}</div>
         </div>
       </div>
     </div>

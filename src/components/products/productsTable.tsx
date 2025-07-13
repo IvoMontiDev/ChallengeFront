@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsEye, BsFunnel, BsPlus, BsSearch } from "react-icons/bs";
 import { RiDeleteBinLine } from "react-icons/ri";
-import type { Product } from '../../pages/dashboardPage';
+import type Product from '../../types/product';
 import Pagination from './pagination';
 import './productStyles/productsTable.css';
 
