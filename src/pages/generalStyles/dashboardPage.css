@@ -1,8 +1,13 @@
+body {
+  background: linear-gradient(135deg, #EBF4FF, #FDF2F8, #EBF4FF);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 .dashboard-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(135deg, #EBF4FF, #FDF2F8, #EBF4FF);
   padding: 2rem 0;
   font-family: 'Inter', sans-serif;
 }
@@ -16,6 +21,13 @@
 
 
 @media (max-width: 900px) {
+
+    html, body {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
   .tableSection {
     padding: 1.2rem 0.7rem;
   }

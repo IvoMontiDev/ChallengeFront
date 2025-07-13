@@ -1,69 +1,71 @@
-# React + TypeScript + Vite
+-- Not implemented API endpoints --
+-------------------------------------------------------------
+USERS
+-------------------------------------------------------------
+Create user -> https://cobaltodev.alwaysdata.net/auth/register
+Method: POST
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
+body ->
   {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+    "username": "user2",
+    "password": "1234"
+  }
+-------------------------------------------------------------
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+-- Implemented API endpoints --
+-------------------------------------------------------------
+USERS
+-------------------------------------------------------------
+Login -> https://cobaltodev.alwaysdata.net/auth/register
+Method: POST
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
+body ->
   {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    "username": "user2",
+    "password": "1234"
+  }
+-------------------------------------------------------------
+GET user -> https://cobaltodev.alwaysdata.net/auth/users
+Method: GET
+
+Headers: Authorization -> Bearer <token>
+-------------------------------------------------------------
+PRODUCTS
+-------------------------------------------------------------
+GET user prods -> https://cobaltodev.alwaysdata.net/products/<product_id>/users
+Method: GET
+
+Headers: Authorization -> Bearer <token>
+response body ->
+  {
+    "username": "user2",
+    "password": "1234"
+  }
+-------------------------------------------------------------
+POST Product -> https://cobaltodev.alwaysdata.net/products
+Method: POST
+
+Headers: Authorization -> Bearer <token>
+body ->
+{
+  "name": "new prod14",
+  "description": "pepe",
+  "price": 99.99,
+  "userIds": [1]
+}
+-------------------------------------------------------------
+DELETE Products -> https://cobaltodev.alwaysdata.net/products/<product_id>
+Method: DELETE
+
+Headers: Authorization -> Bearer <token>
+-------------------------------------------------------------
+GET Products -> https://cobaltodev.alwaysdata.net/products/
+Method: GET
+
+Headers: Authorization -> Bearer <token>
+-------------------------------------------------------------
+GET Products -> https://cobaltodev.alwaysdata.net/products?page=<pageNum>&limit=<prodLimitPerPage>
+Method: GET
+
+Headers: Authorization -> Bearer <token>
