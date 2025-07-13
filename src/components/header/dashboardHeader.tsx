@@ -1,4 +1,3 @@
-// src/components/Header.tsx
 import { BsBoxSeam } from "react-icons/bs";
 import { RxExit } from "react-icons/rx";
 import { useAuth } from '../../context/authContext';
