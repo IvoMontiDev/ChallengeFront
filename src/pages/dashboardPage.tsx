@@ -19,10 +19,10 @@ export default function DashboardPage() {
   const [selected, setSelected]     = useState<string | null>(null);
 
   // Extraemos la carga de usuarios
-  const { users, loading: loadingUsers } = useUsers(showCreate);
+  const { users } = useUsers(showCreate);
 
   // Extraemos la carga de userNames para el modal de view
-  const { userNames, loading: loadingNames } = useProductUsers(selected, showView);
+  const { userNames } = useProductUsers(selected, showView);
 
   return (
     <div className="dashboard-container">
